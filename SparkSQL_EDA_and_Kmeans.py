@@ -175,9 +175,17 @@ print("Cluster Centers: ")
 for center in centers:
     print(center)
 
-# visualization
+# visualization for selecting k
 fig, ax = plt.subplots(1,1, figsize =(10,8))
 ax.plot(range(2,10),cost[2:10])
 ax.set_xlabel('k')
 ax.set_ylabel('cost')
+display(fig)
+
+# clustered plot
+predictions.select("X","Y","prediction").show(truncate = False)
+predictions_pd = predictions.toPandas()
+fig = plt.figure(figsize=(10,10))
+sb.scatterplot(x = "X", y = "Y", hue = "prediction", data = predictions_pd)
+plt.legend(loc='upper left')
 display(fig)
