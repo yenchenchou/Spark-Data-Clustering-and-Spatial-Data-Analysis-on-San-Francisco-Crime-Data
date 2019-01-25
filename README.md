@@ -1,5 +1,8 @@
 # Spark-Data-Clustering-and-Spatial-Data-Analysis-on-San-Francisco-Crime-Data
-Crime incidents have always been problems for every place, thus I came up with an idea with analyzing the data from https://data.sfgov.org to see if there are specifc pattern of crime and reduce the incidents of crime. 
+## Situation
+Given crime data from San Francisco between 2015 - 2018 with features: IncidntNum, Date, Time, District, and longitude and latitude. 
+
+Original Data Source: https://data.sfgov.org
 
 ## Data visualization link
 https://public.tableau.com/profile/yen.chen.chou?fbclid=IwAR0GhlFn45Y866NMGzb2bm08g3MlsOmuo9DxEy3OdqUsZ2qMyPQr__zTw5g#!/vizhome/yenchenchou-2003-2018SanFranciscoCrimeDataVisualization/2003-2018SanFranciscoCrimeDataVisualization
@@ -24,8 +27,6 @@ from pyspark.ml.clustering import KMeans
 from pyspark.ml.evaluation import ClusteringEvaluator
 
 ```
-## Situation
-Given crime data from San Francisco between 2015 - 2018 with features: IncidntNum, Date, Time, District, and longitude and latitude. 
 
 ## Task
 Cluster the crime area according to the location data and OLAP.
