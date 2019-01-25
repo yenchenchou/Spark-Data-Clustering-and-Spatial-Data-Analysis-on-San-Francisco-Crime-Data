@@ -4,6 +4,9 @@ Crime incidents have always been problems for every place, thus I came up with a
 ## Metrics
 Since the ultimate goal is to measure the incidents of crime and the realtionships between each crime feature, the crimeID will be the metric in this project. 
 
+## Data visualization link
+https://public.tableau.com/profile/yen.chen.chou?fbclid=IwAR0GhlFn45Y866NMGzb2bm08g3MlsOmuo9DxEy3OdqUsZ2qMyPQr__zTw5g#!/vizhome/yenchenchou-2003-2018SanFranciscoCrimeDataVisualization/2003-2018SanFranciscoCrimeDataVisualization
+
 ## Prerequisites
 Before we start, these packages are required for our analysis:
 ```Python
