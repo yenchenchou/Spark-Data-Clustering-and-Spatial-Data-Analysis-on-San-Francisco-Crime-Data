@@ -1,9 +1,6 @@
 # Spark-Data-Clustering-and-Spatial-Data-Analysis-on-San-Francisco-Crime-Data
 Crime incidents have always been problems for every place, thus I came up with an idea with analyzing the data from https://data.sfgov.org to see if there are specifc pattern of crime and reduce the incidents of crime. 
 
-## Metrics
-Since the ultimate goal is to measure the incidents of crime and the realtionships between each crime feature, the crimeID will be the metric in this project. 
-
 ## Data visualization link
 https://public.tableau.com/profile/yen.chen.chou?fbclid=IwAR0GhlFn45Y866NMGzb2bm08g3MlsOmuo9DxEy3OdqUsZ2qMyPQr__zTw5g#!/vizhome/yenchenchou-2003-2018SanFranciscoCrimeDataVisualization/2003-2018SanFranciscoCrimeDataVisualization
 
@@ -27,12 +24,18 @@ from pyspark.ml.clustering import KMeans
 from pyspark.ml.evaluation import ClusteringEvaluator
 
 ```
+## Situation
+Given crime data from San Francisco between 2015 - 2018 with features: IncidntNum, Date, Time, District, and longitude and latitude. 
 
-## Processing Steps
-In the analysis, I will be using PySpark as the programming language and the data contains a lot of typos, incorrect data type, and missing values etc.
+## Task
+Cluster the crime area according to the location data and OLAP.
 
-### Part1 "EDA on crime districts, crime categories and spatial data"
-Implement data exploration analysis and spatial data analysis through Spark SQL.
+## Action
+1. Load the data in SparkDataFrame. Since the data from 2015 - 2017 and 2018 have different attributes and even different values on the same crime type. So I needed to loaded separately and union the value. 
+2. Then I did OLAP through Spark SQL and visualization the OLAP result through Matplotlib and Seaborn. 
+3. After that, I identify the crime in the downtown of SF by drawing polygon through define by the longitude and latitude. 
+4. Latter on I used K-means clustering to group the high-risk area of SF and use root mean square error versus the number of clusters to measure the relative performance of the clusters.
 
-### Part2 "Data clustering and evaluation"
-Programmed K-means clustering to specify high-risk areas in San Francisco and diminished 12% of crime incidents.
+## Result
+I identify the top three dangerous areas through kmeans with 3 clusters and specify time with higher crime incidents and which may potentially decrease 12% of crime incidents. Also, I summarize the most frequent type of crime for the government to adjust their policies on crime.
+
