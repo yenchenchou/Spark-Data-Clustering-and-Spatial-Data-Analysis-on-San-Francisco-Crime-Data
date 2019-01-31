@@ -1,6 +1,6 @@
 # Spark-Data-Clustering-and-Spatial-Data-Analysis-on-San-Francisco-Crime-Data
 ## Situation
-Given crime data from San Francisco between 2015 - 2018 with features: IncidntNum, Date, Time, District, and longitude and latitude. 
+Given crime data from San Francisco between 2003 - 2018 with features: IncidntNum, Date, Time, District, and longitude and latitude. 
 
 Original Data Source: https://data.sfgov.org
 
