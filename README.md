@@ -32,7 +32,7 @@ from pyspark.ml.evaluation import ClusteringEvaluator
 Cluster the crime area according to the location data and OLAP.
 
 ## Action
-1. Load the data in SparkDataFrame. Since the data from 2015 - 2017 and 2018 have different attributes and even different values on the same crime type. So I needed to loaded separately and union the value. 
+1. Load the data in SparkDataFrame. Since the data from 20003 - 2017 and 2018 have different attributes and even different values on the same crime type. So I needed to loaded separately and union the value. 
 2. Then I did OLAP through Spark SQL and visualization the OLAP result through Matplotlib and Seaborn. 
 3. After that, I identify the crime in the downtown of SF by drawing polygon through define by the longitude and latitude. 
 4. Latter on I used K-means clustering to group the high-risk area of SF and use root mean square error versus the number of clusters to measure the relative performance of the clusters.
